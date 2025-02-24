@@ -28,7 +28,7 @@ export default function Home() {
               <div className="mb-8 xl:mb-8">
                 <Social
                   className="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary transition-all duration-500"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent hover:bg-accent hover:text-primary transition-all duration-500"
                 />
               </div>
             </div>
