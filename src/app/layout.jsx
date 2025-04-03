@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import StairTransition from "@/components/StairTransition";
 import PageTransition from "@/components/PageTransition";
 
+// Define fonts with Next.js Google Fonts
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${jetBrainsMono.variable} ${geistSans.variable} ${geistMono.variable}`}>
         <Header />
-        <StairTransition /> 
+        <StairTransition />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>

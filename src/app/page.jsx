@@ -1,7 +1,6 @@
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
-import Stairs from "@/components/Stairs"
-import Stats from "@/components/Stats";
+import Stairs from "@/components/Stairs";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
@@ -9,11 +8,12 @@ export default function Home() {
     <section>
       <main className="container h-full">
         <div className="mx-20 flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
-          {/* Text */}
+          {/* Text Section */}
           <div className="text-center space-y-8 mb-36 xl:text-left order-2 xl:order-none">
             <span className="text-2xl">Software Developer</span>
             <h1 className="text-7xl">
-              Hello<br /> <span className="text-green-500">Paul Ayuba</span>
+              Hello<br /> 
+              <span className="text-green-500">Paul Ayuba</span>
             </h1>
             <p className="max-w-[500px] mb-9">
               I excel at creating elegant digital experiences and am proficient in 
@@ -40,13 +40,14 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Photo */}
+          {/* Photo Section */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
       </main>
-       {/* <Stats />  */}
+      {/* Uncomment when needed */}
+      {/* <Stats />  */}
     </section>
   );
 }

@@ -11,7 +11,10 @@ const PageTransition = ({ children }) => {
         key={pathname}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0, transition: { duration: 0.4, ease: "easeInOut" } }}
+        exit={{
+          opacity: 0,
+          transition: { duration: 0.4, ease: "easeInOut" },
+        }}
         className="h-full w-full bg-primary top-0 left-0 z-10"
       >
         {children}
