@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import StairTransition from "@/components/StairTransition";
-import PageTransition from "@/components/pageTransition";
+import PageTransition from "@/components/PageTransition";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],

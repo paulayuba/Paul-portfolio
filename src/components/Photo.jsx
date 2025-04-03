@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative mb-36">
+    <div className="w-full h-full relative md:mt-10 mt-24 mb-36">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
@@ -20,21 +20,21 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[280px] h-[280px] xl:w-[300px] xl:h-[250px] mix-blend-lighten absolute items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          className="w-[280px] h-[280px] xl:w-[300px] xl:h-[250px]  mix-blend-lighten absolute items-center justify-center top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         >
           <Image
-            src="/photo.jpg"
+            src="/profile.jpg"
             priority
             quality={100}
             fill
             alt="Profile Photo"
-            className="object-contain"
+            className="object-contain mb-40 md:mb-20"
           />
         </motion.div>
 
         {/* Circle Animation */}
         <motion.svg
-          className="w-[100px] xl:w-[406px] h-[100px] xl:h-[406px]"
+          className="w-[400px] xl:w-[406px] h-[400px] xl:h-[406px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"

@@ -9,29 +9,29 @@ const servicesData = [
     num: "01",
     title: "Web Development",
     description:
-      "I create responsive, high-performance websites using modern web technologies like React, Next.js, and Tailwind CSS.",
-    href: "#",
+      "I develop fast, scalable, and SEO-friendly web applications using React, Next.js, and Tailwind CSS.",
+    href: "/web-development",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "Landing Page Development",
     description:
-      "I design user-friendly, visually appealing interfaces with a focus on intuitive user experiences.",
-    href: "#",
+      "I design and build high-converting landing pages optimized for performance and engagement.",
+    href: "/landing-page",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Responsive Web Design",
     description:
-      "Crafting unique, memorable logos that establish strong brand identities.",
-    href: "#",
+      "I ensure seamless user experience across all devices with pixel-perfect responsive designs.",
+    href: "/responsive-design",
   },
   {
     num: "04",
-    title: "SEO Optimization",
+    title: "Integration with APIs",
     description:
-      "Enhancing website visibility with strategic SEO techniques for better search engine rankings.",
-    href: "#",
+      "I integrate third-party APIs to enhance functionality and ensure smooth data communication.",
+    href: "/api-integration",
   },
 ];
 
@@ -47,13 +47,15 @@ const Services = () => {
           }}
           className="grid grid-cols-1 md:grid-cols-2 gap-8"
         >
-          {servicesData.map((service, index) => (
+          {servicesData.map((service) => (
             <div
-              key={index}
-              className="flex flex-col p-6 border border-gray-800 rounded-lg hover:bg-gray-900 transition-all duration-300"
+              key={service.title}
+              className="group flex flex-col p-6 border text-gray-500 border-gray-800 rounded-lg hover:bg-gray-900 transition-all duration-500"
             >
               {/* Service Number */}
-              <div className="text-5xl font-extrabold text-outline text-ttransparent">{service.num}</div>
+              <div className="text-5xl font-extrabold text-outline group-hover:text-gray-300 transition-all">
+                {service.num}
+              </div>
 
               {/* Service Title */}
               <h3 className="text-2xl font-semibold text-white mt-2">
@@ -65,10 +67,11 @@ const Services = () => {
 
               {/* Link */}
               <Link
-                href={service.href}
-                className="mt-4 flex items-center text-accent hover:underline"
+                href={service.href || "/"}
+                aria-label={`Learn more about ${service.title}`}
+                className="mt-4 w-[70px] h-[70px] rounded-full bg-white group-hover:bg-green-400 transition-all duration-500 flex justify-center items-center hover:-rotate-45"
               >
-                Learn More <BsArrowDownRight className="ml-2 text-xl" />
+                <BsArrowDownRight className="text-gray-900 group-hover:text-white text-2xl transition-all" />
               </Link>
             </div>
           ))}

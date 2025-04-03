@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-black text-white leading-loose;
   }
 
   h1 {
@@ -24,7 +24,12 @@
   }
 
   /* Fix: Proper hover effect class */
-  .hover\:text-outline:hover {
-    -webkit-text-stroke: 1px #00ff99;
+  .text-outline:hover {
+    -webkit-text-stroke: 2px #00ff99;
+  }
+
+  /* Ensure all elements have the correct colors */
+  * {
+    @apply border-border outline-ring/50;
   }
 }
