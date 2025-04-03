@@ -30,7 +30,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${jetBrainsMono.variable} ${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Paul Ayuba - Software Developer Portfolio" />
+        <title>Paul Ayuba - Portfolio</title>
+      </head>
+      <body
+        className={`${jetBrainsMono.variable} ${geistSans.variable} ${geistMono.variable} font-sans`}
+      >
         <Header />
         <StairTransition />
         <PageTransition>{children}</PageTransition>
