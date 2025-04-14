@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 
+
 const links = [
   { name: "home", path: "/" },
   { name: "services", path: "/services" },
@@ -26,6 +27,7 @@ const Navbar = () => {
           }capitalize font-medium hover:text-accent transition-all`}
         >
           {link.name}
+        
         </Link>
       ))}
     </nav>
@@ -45,7 +47,8 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <div className="hidden xl:flex items-center gap-8">
-          <Navbar />
+          <Navbar/>
+          
           <Link href="/contact">
         
           </Link>
