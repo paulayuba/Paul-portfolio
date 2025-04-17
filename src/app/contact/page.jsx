@@ -44,7 +44,7 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-48"
+      className="py-16"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
@@ -91,7 +91,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-8">
+          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-2 xl:mb-4">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => (
                 <li key={index} className="flex items-center gap-6">
