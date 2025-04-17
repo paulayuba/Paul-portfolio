@@ -1,11 +1,12 @@
-import { JetBrains_Mono, Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Navbar from "@/components/Navbar";
 import StairTransition from "@/components/StairTransition";
-import PageTransition from "@/components/pageTransition";
+import PageTransition from "@/components/PageTransition";
 
-// Define fonts with Next.js Google Fonts
+
+
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -34,10 +35,10 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Paul Ayuba - Software Developer Portfolio" />
-        <title>Paul Ayuba - Portfolio</title>
+        <title>Paul-Portfolio</title>
       </head>
       <body
-        className={`${jetBrainsMono.variable} ${geistSans.variable} ${geistMono.variable} font-sans`}
+        className={jetBrainsMono.variable}
       >
         <Header />
         <StairTransition />

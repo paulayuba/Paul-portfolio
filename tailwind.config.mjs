@@ -1,3 +1,5 @@
+import { hover } from 'framer-motion';
+
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: ["class"],
@@ -9,25 +11,26 @@ export default {
   theme: {
   	container: {
   		center: true,
-  		padding: '4'
+  		padding: '15rm',
   	},
   	screens: {
   		sm: '640px',
   		md: '768px',
   		lg: '960px',
-  		xl: '1200px'
+  		xl: '1200px',
   	},
   	fontFamily: {
-  		primary: [
-  			'var(--font-jetbrainsMono)'
-  		]
-  	},
+		primary: "var(--font-jetbrainsMono)"
+	},
   	extend: {
-  		colors: {
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
+		colors: {
+		primary: "#1c1c22",
+		accent: {
+			DEFAULT: "#00ff99",
+			hover: "#00e187",
+		},
+		},
+  		
   			accent: {
   				DEFAULT: 'hsl(var(--accent))',
   				hover: '#00e18',
@@ -71,7 +74,6 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		}
-  	}
-  },
+  	},
   plugins: [require("tailwindcss-animate")],
 };
