@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -32,11 +31,17 @@ const info = [
   {
     icon: <FaMapMarkedAlt />,
     title: "Location",
-    description: "Code Corner Tech Town, jos",
+    description: "Code Corner Tech Town, Jos",
   },
 ];
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // You can integrate email services or APIs here
+    console.log("Form submitted");
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -50,23 +55,26 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* Form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+              onSubmit={handleSubmit}
+            >
               <h3 className="text-4xl text-green-500">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                Have a project or idea in mind? Feel free to reach out!
               </p>
 
               {/* Inputs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="text" placeholder="First name" />
-                <Input type="text" placeholder="Last name" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="tel" placeholder="Phone number" />
+                <Input type="text" placeholder="First name" name="firstName" required />
+                <Input type="text" placeholder="Last name" name="lastName" required />
+                <Input type="email" placeholder="Email address" name="email" required />
+                <Input type="tel" placeholder="Phone number" name="phone" />
               </div>
 
               {/* Select */}
-              <Select>
-                <SelectTrigger className="w-full">
+              <Select required>
+                <SelectTrigger className="w-full" aria-label="Select a service">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
@@ -83,10 +91,14 @@ const Contact = () => {
               <Textarea
                 className="h-[200px]"
                 placeholder="Type your message here."
+                name="message"
+                required
               />
 
               {/* Button */}
-              <Button className="max-w-40">Send Message</Button>
+              <Button type="submit" className="max-w-40">
+                Send Message
+              </Button>
             </form>
           </div>
 
@@ -113,4 +125,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
